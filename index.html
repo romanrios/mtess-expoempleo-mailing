@@ -1,166 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Expo Empleo Santa Fe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Expo Empleo Santa Fe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* Reset seguro para emails */
-        body,
-        table,
-        td,
-        p,
-        a {
-            font-family: Arial, sans-serif;
-            color: #494963;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    /* Estilos base */
+    body, table, td, p, a {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      color: #494963;
+      margin: 0; padding: 0;
+    }
+    a { text-decoration: none; }
 
-        /* SOLO banners e imágenes grandes */
-        .full-img {
-            display: block;
-            border: 0;
-            width: 100%;
-            height: auto;
-        }
+    /* Imágenes */
+    .full-img { display:block; width:100%; height:auto; border:0; }
+    .logo { width:150px; height:auto; display:block; }
+    .icon { width:22px; height:auto; margin:0 3px; display:inline-block; border:0; }
 
-        /* Íconos sociales */
-        .icon {
-            display: inline-block;
-            border: 0;
-            width: 22px;
-            height: auto;
-            margin: 0 2px;
-        }
+    /* Botón */
+    .button {
+      display:inline-block;
+      padding:18px 34px;
+      font-size:16px; font-weight:600;
+      color:#fff; border-radius:30px;
+      background:#e12153;
+      background:linear-gradient(110deg,#ffc802 0%,#ff7402 33%,#e12153 66%,#3c3ae2 100%);
+    }
 
-        a {
-            text-decoration: none;
-        }
-
-        /* Responsivo */
-        @media screen and (max-width: 620px) {
-            .container {
-                width: 100% !important;
-            }
-
-            .content {
-                padding: 20px !important;
-                font-size: 15px !important;
-            }
-
-            .button {
-                width: 90% !important;
-                padding: 14px !important;
-                font-size: 16px !important;
-            }
-        }
-    </style>
+    /* Responsivo */
+    @media screen and (max-width:620px) {
+      .container { width:100% !important; }
+      .content { padding:20px !important; font-size:15px !important; }
+      .button { width:90% !important; text-align:center; }
+      .footer-col { display:block !important; width:100% !important; text-align:center !important; }
+    }
+  </style>
 </head>
 
-<body style="margin:0; padding:0; background-color:#f5f5f5;">
-    <center>
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f5f5">
+<body style="background:#f5f5f5;">
+  <center>
+    <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#f5f5f5">
+      <tr>
+        <td align="center">
+          <table class="container" width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="max-width:600px;">
+
+            <!-- Banner -->
             <tr>
-                <td align="center">
-                    <table class="container" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff"
-                        style="max-width:600px;">
-
-                        <!-- Banner superior -->
-                        <tr>
-                            <td align="center">
-                                <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-header.png"
-                                    alt="Expo Empleo Santa Fe" class="full-img">
-                            </td>
-                        </tr>
-
-                        <!-- Texto principal -->
-                        <tr>
-                            <td align="center" class="content"
-                                style="padding:30px 25px; font-size:16px; line-height:22px;">
-                                <p style="margin:0;">Te invitamos a participar de la</p>
-                                <p style="margin:8px 0; font-weight:bold; font-size:20px;">Expo Empleo Santa Fe</p>
-                                <p style="margin:0;">Una iniciativa que busca convertir tus <strong>búsquedas laborales
-                                        en oportunidades reales.</strong></p>
-                            </td>
-                        </tr>
-
-                        <!-- Imagen intermedia -->
-                        <tr>
-                            <td align="center">
-                                <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-img.jpg"
-                                    alt="Imagen del evento" class="full-img">
-                            </td>
-                        </tr>
-
-                        <!-- Botón -->
-                        <tr>
-                            <td align="center" style="padding:40px 20px 30px 20px;">
-                                <a href="https://santafe.gob.ar/inscripcion" target="_blank" class="button"
-                                    style="display:inline-block; padding:18px 34px; font-size:16px; font-weight:600; color:#fff; border-radius:30px; background:#e12153; background: linear-gradient(110deg, #ffc802 0%, #ff7402 33%, #e12153 66%, #3c3ae2 100%);">
-                                    Preinscribite
-                                </a>
-                                <p style="font-size:16px; line-height:20px; margin-top:20px;">y pronto nos pondremos en
-                                    contacto.</p>
-                            </td>
-                        </tr>
-
-                        <!-- Zócalo -->
-                        <tr>
-                            <td align="center" bgcolor="#f0f0f0" style="padding:20px; font-size:12px; color:#666666;">
-                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                    <tr>
-                                        <!-- Columna izquierda -->
-                                        <td align="left" valign="middle" style="width:50%; padding:10px;">
-                                            <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-logosf.png"
-                                                alt="Santa Fe Provincia"
-                                                style="width:150px; height:auto; display:block;">
-                                        </td>
-
-                                        <!-- Columna derecha -->
-                                        <td align="right" valign="middle"
-                                            style="width:50%; padding:10px; text-align:right;">
-                                            <p style="margin:0;">
-                                                <a href="https://santafe.gob.ar"
-                                                    style="font-size:16px; font-weight:bold; color:#494963; text-decoration:none;">
-                                                    santafe.gob.ar
-                                                </a>
-                                            </p>
-                                            <p style="margin:8px 0 0 0;">
-                                                <a href="https://www.facebook.com/GobSantaFe/">
-                                                    <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-fb.png"
-                                                        alt="Facebook" width="24"
-                                                        style="margin:0 3px; display:inline-block; border:0;">
-                                                </a>
-                                                <a href="https://www.instagram.com/gobsantafe/">
-                                                    <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-ig.png"
-                                                        alt="Instagram" width="24"
-                                                        style="margin:0 3px; display:inline-block; border:0;">
-                                                </a>
-                                                <a href="https://www.youtube.com/GobSantaFe">
-                                                    <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-yt.png"
-                                                        alt="YouTube" width="24"
-                                                        style="margin:0 3px; display:inline-block; border:0;">
-                                                </a>
-                                                <a href="https://x.com/gobsantafe">
-                                                    <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-x.png"
-                                                        alt="X" width="24"
-                                                        style="margin:0 3px; display:inline-block; border:0;">
-                                                </a>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-
-                    </table>
-                </td>
+              <td align="center">
+                <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-header.png" alt="Se viene: Expo Empleo Santa Fe, 7 de octubre, 9 a 17:30 hs., La Redonda, Salvador del Carril y Belgrano" class="full-img">
+              </td>
             </tr>
-        </table>
-    </center>
-</body>
 
+            <!-- Texto -->
+            <tr>
+              <td class="content" align="center" style="padding:30px 25px; font-size:16px; line-height:22px;">
+                <p>Te invitamos a participar de la</p>
+                <p style="margin:8px 0; font-weight:bold; font-size:20px;">Expo Empleo Santa Fe</p>
+                <p>Una iniciativa que busca convertir tus <strong>búsquedas laborales en oportunidades reales.</strong></p>
+              </td>
+            </tr>
+
+            <!-- Imagen -->
+            <tr>
+              <td align="center">
+                <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-img.jpg" alt="Imagen del evento" class="full-img">
+              </td>
+            </tr>
+
+            <!-- Botón -->
+            <tr>
+              <td align="center" style="padding:40px 20px 30px;">
+                <a href="https://santafe.gob.ar/inscripcion" target="_blank" class="button">Preinscribite</a>
+                <p style="margin-top:20px;">y pronto nos pondremos en contacto.</p>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td bgcolor="#f0f0f0" style="padding:20px; font-size:12px; color:#666;">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <!-- Logo -->
+                    <td class="footer-col" align="left" valign="middle" style="width:50%; padding:10px;">
+                      <img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-logosf.png" alt="Santa Fe Provincia" class="logo">
+                    </td>
+                    <!-- Links + redes -->
+                    <td class="footer-col" align="right" valign="middle" style="width:50%; padding:10px;">
+                      <p style="margin:0;">
+                        <a href="https://santafe.gob.ar" style="font-size:16px; font-weight:bold; color:#494963;">santafe.gob.ar</a>
+                      </p>
+                      <p style="margin-top:8px;">
+                        <a href="https://www.facebook.com/GobSantaFe/"><img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-fb.png" alt="Facebook" class="icon"></a>
+                        <a href="https://www.instagram.com/gobsantafe/"><img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-ig.png" alt="Instagram" class="icon"></a>
+                        <a href="https://www.youtube.com/GobSantaFe"><img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-yt.png" alt="YouTube" class="icon"></a>
+                        <a href="https://x.com/gobsantafe"><img src="https://raw.githubusercontent.com/romanrios/MTESS/refs/heads/main/assets/expoempleo-mailing-icon-x.png" alt="X" class="icon"></a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
 </html>
